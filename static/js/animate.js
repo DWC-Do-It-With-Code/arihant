@@ -160,7 +160,7 @@ loader.load(
         }
         object.geometry.attributes.uv.needsUpdate = true;
 
-        const texture = new THREE.TextureLoader().load('/static/glb/texture/' + object.name + ".png");
+        const texture = new THREE.TextureLoader().load('/arihant/static/glb/texture/' + object.name + ".png");
         let material = new THREE.MeshStandardMaterial({ map: texture, transparent: true, opacity: 1, side: THREE.DoubleSide});
 
         if(object.name == "Text"){
@@ -200,7 +200,7 @@ loader.load(
 
 // Loading second file
 loader.load(
-    "/static/glb/try75_2.glb",
+    "/arihant/static/glb/try75_2.glb",
     function (gltf){
         const model = gltf.scene;
         gltf.scene.traverse(function (object) { object.frustumCulled = false; });
