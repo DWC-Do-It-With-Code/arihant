@@ -133,7 +133,7 @@ function updateOpacity() {
 
 // Load the .glb file
 loader.load(
-  "/static/glb/try75.glb",
+  "/arihant/static/glb/try75.glb",
   function (gltf) {
     // Called when the model is loaded
     const model = gltf.scene;
@@ -217,7 +217,7 @@ loader.load(
             }
             object.geometry.attributes.uv.needsUpdate = true;
 
-            const texture = new THREE.TextureLoader().load('/static/glb/texture/' + object.name + ".png");
+            const texture = new THREE.TextureLoader().load('/arihant/static/glb/texture/' + object.name + ".png");
             let material = new THREE.MeshStandardMaterial({ map: texture, transparent: true, opacity: 1, side: THREE.DoubleSide});
 
             if(object.name == "formal"){
