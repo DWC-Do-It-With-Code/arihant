@@ -1,5 +1,7 @@
-<!DOCTYPE html>
-<html lang="en"><head>
+<!doctype html>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,9 +13,10 @@
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&amp;family=Open+Sans&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
 
     <link href="/arihant/static/css/bootstrap.min.css" rel="stylesheet">
 
@@ -36,8 +39,7 @@ TemplateMo 590 topic listing
 https://templatemo.com/tm-590-topic-listing
 
 -->
-    
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
         body {
             margin: 0px;
@@ -304,7 +306,6 @@ https://templatemo.com/tm-590-topic-listing
 }
 
 </style>
-    
 </head>
 
 <body id="top">
@@ -313,7 +314,7 @@ https://templatemo.com/tm-590-topic-listing
     <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
 
     <main>
-        <div id="sticky-wrapper" class="sticky-wrapper" style="height: 127px;"><nav class="navbar navbar-expand-lg" style="width: 1102px;">
+        <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="/">
                     <div class="b"><img src="/arihant/static/images/logo-final.png" alt="" width="200"></div>
@@ -323,41 +324,33 @@ https://templatemo.com/tm-590-topic-listing
 <!--                    <a href="#top" class="navbar-icon bi-person smoothscroll"></a>-->
                 </div>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-lg-5 me-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll active" href="/">Home</a>
+                            <a class="nav-link click-scroll" href="/">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="/aboutus">About Us</a>
+                            <a class="nav-link" href="/aboutus">About Us</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link inactive" href="/expertise">Expertise</a>
+                            <a class="nav-link" href="/expertise">Expertise</a>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle inactive" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Industries</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Industries</a>
 
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                
-                                <li><a class="dropdown-item" >Pharma</a></li>
-                                
-                                <li><a class="dropdown-item" >Corporate</a></li>
-                                
-                                <li><a class="dropdown-item" >Factory</a></li>
-                                
-                                <li><a class="dropdown-item" >Jewellery</a></li>
-                                
-                                <li><a class="dropdown-item" >Automobile</a></li>
-                                
-                                <li><a class="dropdown-item" >Hospital</a></li>
-                                
+                                {% for i in industry %}
+                                <li><a class="dropdown-item" href="/industry/{{i.industry_name}}">{{i.industry_name}}</a></li>
+                                {% endfor %}
 <!--                                <li><a class="dropdown-item" href="/industry/pharma/">Pharma</a></li>-->
 <!--                                <li><a class="dropdown-item" href="/industry/coporate">Corporate</a></li>-->
 <!--                                <li><a class="dropdown-item" href="detail">Factory</a></li>-->
@@ -368,11 +361,11 @@ https://templatemo.com/tm-590-topic-listing
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link inactive">FAQs</a>
+                            <a class="nav-link" href="/faqs">FAQs</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link inactive">Inquiry</a>
+                            <a class="nav-link" href="/contact">Inquiry</a>
                         </li>
 
 <!--                        <li class="nav-item dropdown">-->
@@ -392,15 +385,14 @@ https://templatemo.com/tm-590-topic-listing
                     </div>
                 </div>
             </div>
-        </nav></div>
+        </nav>
 
-        
-        <section class="" id="section_1" ontouchstart="swipstart(event)" ondragstart="swipstart(event)" ondragend="swipend(event)" ontouchend="swipend(event)" style="height: 645px;">
+        <section class="" id="section_1"  ontouchstart="swipstart(event)" ondragstart="swipstart(event)" ondragend="swipend(event)" ontouchend="swipend(event)">
             <div class="firstPage">
-                <button id="left" onclick="moveLeft();"> <i class="fa-solid fa-chevron-left"></i> </button>
-                <button id="right" onclick="moveRight();"> <i class="fa-solid fa-chevron-right"></i> </button>
+                <button disabled id="left" onclick="moveLeft();"> <i class="fa-solid fa-chevron-left"></i> </button>
+                <button disabled id="right" onclick="moveRight();"> <i class="fa-solid fa-chevron-right"></i> </button>
             </div>
-        <canvas width="1536" height="645" style="display: block; width: 1536px; height: 645px;"></canvas></section>
+        </section>
 
         <script>
             let lastX;
@@ -427,21 +419,21 @@ https://templatemo.com/tm-590-topic-listing
 
         <section>
             <div class="gettingtop">
-                <h1 id="canvatag">Uniform Creates <span id="ch">Discipline</span> </h1>
+                <h1 id="canvatag">Uniform Creates <span id="ch">community</span> </h1>
                 <p id="limit">Uniforms foster professionalism, responsibility, unity, and discipline, strengthening business identity, employee accountability, a sense of belonging, and a focused environment.</p>
             </div>
         </section>
 
         <script src="/arihant/static/js/animate.js"></script>
 <!--        <div class="fullhide" id="loading"></div>-->
-        <div class="fullhide" id="loading" style="opacity: 0; display: none;">
+        <div class="fullhide" id="loading">
             <div class="center">
                 <div>
-                    <div id="loading-bar" class="">
-                        <div id="progress" style="width: 94%;"></div>
+                    <div id="loading-bar">
+                        <div id="progress"></div>
                     </div>
                     <p id="lp">
-                        <span id="ls">94</span> / 100
+                        <span id="ls">0</span> / 100
                     </p>
                 </div>
                 <script>
@@ -480,7 +472,7 @@ https://templatemo.com/tm-590-topic-listing
                 </div>
             </div>
         </div>
-        <section class="featured-section" style="background: none; padding-bottom: 0px;">
+        <section class="featured-section" style="background: none; padding-bottom: 0px;" >
             <div class="container">
                 <div class="row justify-content-center" style="bottom: 0px; margin-bottom: 40px; margin-top:20px;">
 
@@ -529,13 +521,13 @@ https://templatemo.com/tm-590-topic-listing
 
                                     <ul class="social-icon">
                                         <li class="social-icon-item">
-                                            <a href="https://instagram.com/arihants_a_brand_a_trust?utm_source=qr&amp;igshid=MzNlNGNkZWQ4Mg%3D%3D" class="social-icon-link bi-instagram"></a>
+                                            <a href="https://instagram.com/arihants_a_brand_a_trust?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" class="social-icon-link bi-instagram"></a>
                                         </li>
 
                                         <li class="social-icon-item">
                                             <a href="https://www.facebook.com/arihantsabrandatrust?mibextid=2JQ9oc" class="social-icon-link bi-facebook"></a>
                                         </li>
-                                </ul></div>
+                                </div>
 
                                 <div class="section-overlay"></div>
                             </div>
@@ -551,29 +543,37 @@ https://templatemo.com/tm-590-topic-listing
             <div class="container">
 
                 <div class="col-12 text-center">
-                    <h2 class="mb-4">Industries We Work&nbsp;In</h2>
+                    <h2 class="mb-4">Industries We Work In</h1>
                 </div>
 
             </div>
-            
+            </div>
 
             <div class="container-fluid">
                 <div class="row">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="Pharma-tab" data-bs-toggle="tab" data-bs-target="#Pharma-tab-pane" type="button" role="tab" aria-controls="Pharma-tab-pane" aria-selected="true">Pharma</button>
+                            <button class="nav-link" id="Pharma-tab" data-bs-toggle="tab"
+                                data-bs-target="#Pharma-tab-pane" type="button" role="tab"
+                                aria-controls="Pharma-tab-pane" aria-selected="true">Pharma</button>
                         </li>
 
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="Corporate-tab" data-bs-toggle="tab" data-bs-target="#Corporate-tab-pane" type="button" role="tab" aria-controls="Corporate-tab-pane" aria-selected="false" tabindex="-1">Corporate &amp; School</button>
+                            <button class="nav-link" id="Corporate-tab" data-bs-toggle="tab"
+                                data-bs-target="#Corporate-tab-pane" type="button" role="tab"
+                                aria-controls="Corporate-tab-pane" aria-selected="false">Corporate & School</button>
                         </li>
 
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="Factory-tab" data-bs-toggle="tab" data-bs-target="#Factory-tab-pane" type="button" role="tab" aria-controls="Factory-tab-pane" aria-selected="false" tabindex="-1">Factory &amp; Automobile</button>
+                            <button class="nav-link" id="Factory-tab" data-bs-toggle="tab"
+                                data-bs-target="#Factory-tab-pane" type="button" role="tab"
+                                aria-controls="Factory-tab-pane" aria-selected="false">Factory & Automobile</button>
                         </li>
 
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="Hospitality-tab" data-bs-toggle="tab" data-bs-target="#Hospitality-tab-pane" type="button" role="tab" aria-controls="Hospitality-tab-pane" aria-selected="false" tabindex="-1">Hospitality</button>
+                            <button class="nav-link" id="Hospitality-tab" data-bs-toggle="tab"
+                                data-bs-target="#Hospitality-tab-pane" type="button" role="tab"
+                                aria-controls="Hospitality-tab-pane" aria-selected="false">Hospitality</button>
                         </li>
                     </ul>
                 </div>
@@ -583,7 +583,8 @@ https://templatemo.com/tm-590-topic-listing
                 <div class="row">
                     <div class="col-12">
                         <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade active show" id="Pharma-tab-pane" role="tabpanel" aria-labelledby="Pharma-tab" tabindex="0">
+                            <div class="tab-pane fade" id="Pharma-tab-pane" role="tabpanel" aria-labelledby="Pharma-tab"
+                                tabindex="0">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
                                         <div class="custom-block bg-white shadow-lg">
@@ -598,7 +599,8 @@ https://templatemo.com/tm-590-topic-listing
 
                                                 </div>
 
-                                                <img src="/arihant/static/images/fotus/home-pharma.png" class="custom-block-image img-fluid" alt="">
+                                                <img src="/arihant/static/images/fotus/home-pharma.png"
+                                                    class="custom-block-image img-fluid" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -615,7 +617,8 @@ https://templatemo.com/tm-590-topic-listing
                                                         <p class="text-white">Contact us with your requirements by using
                                                             the form below.</p>
 
-                                                        <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Inquire Now !</a>
+                                                        <a href="topics-detail.html"
+                                                            class="btn custom-btn mt-2 mt-lg-3">Inquire Now !</a>
                                                     </div>
 
 
@@ -648,14 +651,15 @@ https://templatemo.com/tm-590-topic-listing
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade" id="Corporate-tab-pane" role="tabpanel" aria-labelledby="Corporate-tab" tabindex="0">
+                            <div class="tab-pane fade" id="Corporate-tab-pane" role="tabpanel"
+                                aria-labelledby="Corporate-tab" tabindex="0">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
                                         <div class="custom-block bg-white shadow-lg">
                                             <a href="topics-detail.html">
                                                 <div class="d-flex">
                                                     <div>
-                                                        <h5 class="mb-2">Corporate &amp; School</h5>
+                                                        <h5 class="mb-2">Corporate & School</h5>
 
                                                         <p class="mb-0">Blazers, Formals, Shirts, T-shirts, tie and
                                                             More...</p>
@@ -664,7 +668,8 @@ https://templatemo.com/tm-590-topic-listing
 
                                                 </div>
 
-                                                <img src="/arihant/static/images/fotus/home-corporate.png" class="custom-block-image img-fluid" alt="">
+                                                <img src="/arihant/static/images/fotus/home-corporate.png"
+                                                    class="custom-block-image img-fluid" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -676,12 +681,13 @@ https://templatemo.com/tm-590-topic-listing
 
                                                 <div class="custom-block-overlay-text d-flex">
                                                     <div>
-                                                        <h5 class="text-white mb-2">Corporate &amp; School</h5>
+                                                        <h5 class="text-white mb-2">Corporate & School</h5>
 
                                                         <p class="text-white">Contact us with your requirements by using
                                                             the form below.</p>
 
-                                                        <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Inquire Now !</a>
+                                                        <a href="topics-detail.html"
+                                                            class="btn custom-btn mt-2 mt-lg-3">Inquire Now !</a>
                                                     </div>
 
 
@@ -714,14 +720,15 @@ https://templatemo.com/tm-590-topic-listing
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade" id="Factory-tab-pane" role="tabpanel" aria-labelledby="Factory-tab" tabindex="0">
+                            <div class="tab-pane fade" id="Factory-tab-pane" role="tabpanel"
+                                aria-labelledby="Factory-tab" tabindex="0">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
                                         <div class="custom-block bg-white shadow-lg">
                                             <a href="topics-detail.html">
                                                 <div class="d-flex">
                                                     <div>
-                                                        <h5 class="mb-2">Factory &amp; Automobile</h5>
+                                                        <h5 class="mb-2">Factory & Automobile</h5>
 
                                                         <p class="mb-0">Boiler Suits, Shirts, Jackets, Bootes and
                                                             More... </p>
@@ -730,7 +737,8 @@ https://templatemo.com/tm-590-topic-listing
 
                                                 </div>
 
-                                                <img src="/arihant/static/images/fotus/home-factory.png" class="custom-block-image img-fluid" alt="">
+                                                <img src="/arihant/static/images/fotus/home-factory.png"
+                                                    class="custom-block-image img-fluid" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -742,12 +750,13 @@ https://templatemo.com/tm-590-topic-listing
 
                                                 <div class="custom-block-overlay-text d-flex">
                                                     <div>
-                                                        <h5 class="text-white mb-2">Factory &amp; Automobile</h5>
+                                                        <h5 class="text-white mb-2">Factory & Automobile</h5>
 
                                                         <p class="text-white">Contact us with your requirements by using
                                                             the form below.</p>
 
-                                                        <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Inquire Now !</a>
+                                                        <a href="topics-detail.html"
+                                                            class="btn custom-btn mt-2 mt-lg-3">Inquire Now !</a>
                                                     </div>
 
 
@@ -780,7 +789,8 @@ https://templatemo.com/tm-590-topic-listing
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade" id="Hospitality-tab-pane" role="tabpanel" aria-labelledby="Hospitality-tab" tabindex="0">
+                            <div class="tab-pane fade" id="Hospitality-tab-pane" role="tabpanel"
+                                aria-labelledby="Hospitality-tab" tabindex="0">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
                                         <div class="custom-block bg-white shadow-lg">
@@ -795,7 +805,8 @@ https://templatemo.com/tm-590-topic-listing
 
                                                 </div>
 
-                                                <img src="/arihant/static/images/fotus/home-corporate.png" class="custom-block-image img-fluid" alt="">
+                                                <img src="/arihant/static/images/fotus/home-corporate.png"
+                                                    class="custom-block-image img-fluid" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -812,7 +823,8 @@ https://templatemo.com/tm-590-topic-listing
                                                         <p class="text-white">Contact us with your requirements by using
                                                             the form below.</p>
 
-                                                        <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Inquire Now !</a>
+                                                        <a href="topics-detail.html"
+                                                            class="btn custom-btn mt-2 mt-lg-3">Inquire Now !</a>
                                                     </div>
 
 
@@ -848,7 +860,7 @@ https://templatemo.com/tm-590-topic-listing
 
                     </div>
                 </div>
-        </div></section>
+        </section>
 
 
         <!-- Sponsar Start -->
@@ -858,8 +870,12 @@ https://templatemo.com/tm-590-topic-listing
                 Customer</h1>
         </div>
         <div class="sponsar">
-            <div class="sponsar-container move" id="sponsar-container" style="height: auto; width: 0%; left: -20%;">
-                
+            <div class="sponsar-container" id="sponsar-container" style="height: auto;">
+                {% for p in partners %}
+                <div class="sponsar-element">
+                    <img src="/media/{{p.logo}}" style="width: 200px;">
+                </div>
+                {% endfor %}
 <!--                <div class="sponsar-element">-->
 <!--                    <img src="/arihant/static/images/logo.png" style="width: 200px;">-->
 <!--                </div>-->
@@ -935,7 +951,10 @@ https://templatemo.com/tm-590-topic-listing
                     </div>
 
                     <div class="col-lg-5 col-12 mb-4 mb-lg-0">
-                        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.153653347714!2d87.27704787522836!3d23.562924378798794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f76d92f3e04431%3A0x3926100f7f371eff!2sArihant%20Cloth%20Centre!5e0!3m2!1sen!2sin!4v1694974003714!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe class="google-map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.153653347714!2d87.27704787522836!3d23.562924378798794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f76d92f3e04431%3A0x3926100f7f371eff!2sArihant%20Cloth%20Centre!5e0!3m2!1sen!2sin!4v1694974003714!5m2!1sen!2sin"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg- mb-md-0 ms-auto">
@@ -943,7 +962,7 @@ https://templatemo.com/tm-590-topic-listing
                         <hr>
 
                         <p>New Cloth Market, <br> Ananda Gopal Mukherjee Sarani Rd, Benachity, Durgapur,
-                            West&nbsp;Bengal&nbsp;713213</p>
+                            West Bengal 713213</p>
 
 
                         <!-- <p class="d-flex align-items-center mb-1">
@@ -990,11 +1009,8 @@ https://templatemo.com/tm-590-topic-listing
                 </div>
             </div>
         </section>
-
     </main>
 
-    
-    
     <footer class="section-padding">
         <div class="container">
             <div class="row" id="footerr">
@@ -1061,6 +1077,6 @@ https://templatemo.com/tm-590-topic-listing
     <script src="/arihant/static/js/custom.js"></script>
     <script type="text/javascript">document.getElementById("Pharma-tab").click();</script>
 
+</body>
 
-
-</body></html>
+</html>
