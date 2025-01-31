@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Arihant's</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+
+    <link href="/arihant/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/arihant/static/css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="/arihant/static/css/templatemo-topic-listing.css" rel="stylesheet">
+    <style>
+        a {
+            text-decoration: auto !important;
+        }
+
+        .b {
+            font-weight: var(--font-weight-bold);
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+    <!--
+
+TemplateMo 590 topic listing
+
+https://templatemo.com/tm-590-topic-listing
+
+-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0px;
+            background: white;
+            overflow-x: hidden;
+            /* height: 100vh; */
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            /* filter: drop-shadow(-10px 10px 10px rgba(0, 0, 0, 0.5)); */
+            /* Apply the CSS blur shadow effect */
+        }
+
+        .firstPage {
+            position: relative;
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: space-between;
+            z-index: 2;
+            height: 100%;
+        }
+
+        .firstPage>button {
+            font-size: 40px;
+            border: none;
+            background: transparent;
+            padding: 30px;
+            color: white;
+        }
+
+        .half {
+            /* flex: 1; */
+            width: 33%;
+            overflow: hidden;
+            /* border: 1px solid black; */
+        }
+
+        .featured-section {
+            z-index: 4;
+            position: relative;
+        }
+
+        .sponsar {
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .sponsar-container {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            left: 0%;
+            height: 300px;
+            overflow-y: hidden;
+        }
+
+        .move {
+            transition: left 0.3s;
+        }
+
+        .sponsar-element {
+            width: 20%;
+            text-align: center;
+            background-size: cover;
+            background-position-x: 50%;
+        }
+
+        .sponsar-element>.season-pics {
+            width: 90%;
+            height: 200px;
+        }
+
+        .custom-block-image {
+            border-bottom: 4px solid;
+        }
+
+        .navbar {
+            backdrop-filter: blur(1px);
+        }
+
+        .nav-link {
+            color: black !important;
+        }
+
+        .nav-link:hover {
+            color: #014268 !important;
+        }
+
+        .hide {
+            opacity: 0;
+            transition: 1s opacity top;
+            /* transition-delay: 1s; */
+        }
+
+        .head,
+        .content-b,
+        .buts-b {
+            top: 50px;
+            position: relative;
+            transition: 1s;
+        }
+
+        .head {
+            transition-delay: 0.8s;
+        }
+
+        .content-b {
+            transition-delay: 1s;
+        }
+
+        .buts-b {
+            transition-delay: 1.1s;
+        }
+
+        .hide:hover .head {
+            top: 0px;
+        }
+
+        .hide:hover .content-b {
+            top: 0px;
+        }
+
+        .hide:hover .buts-b {
+            top: 0px;
+        }
+
+        #student {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            /* padding-right: 50px; */
+        }
+
+        .text-content {
+            /* border: 1px solid black; */
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px;
+            padding: 70px;
+        }
+
+        .oy {
+            overflow-x: hidden;
+        }
+
+        @media only screen and (max-width: 820px) {
+            .text-content {
+                padding: 10px;
+                font-size: 10px;
+            }
+
+        }
+
+        .glass {
+            -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+        }
+
+        .fullhide {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: white;
+            top: 0px;
+            z-index: 20;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: 4s opacity;
+            transition-delay: 2s;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+    <style>
+        .gettingtop {
+            text-align: center;
+            top: -85px;
+            z-index: 2;
+            position: relative;
+            -webkit-backdrop-filter: blur(40px);
+            backdrop-filter: blur(40px);
+            transition: top 1s;
+        }
+
+        #limit {
+            margin-left: 20%;
+            margin-right: 20%;
+            text-align: justify;
+        }
+
+        #ch::after {
+            content: ".";
+        }
+
+        @media screen and (max-width:699px) {
+            #ch {
+                display: block;
+            }
+        }
+    </style>
+    <style>
+        #loading-bar {
+            width: 50vw;
+            height: 5vw;
+            min-height: 24px;
+            background-color: #eaeaea;
+            border: 1vw solid #fff;
+            border-radius: 5vw;
+            box-shadow: 0 0 2vw rgba(0, 127, 255, 0.25);
+            overflow: hidden;
+        }
+
+        #loading-bar.complete {
+            transition: 0.8s ease;
+            transform: rotate(-180deg);
+        }
+
+        #loading-bar.complete #progress {
+            transition: 0.4s ease;
+            width: 0% !important;
+        }
+
+        #progress {
+            width: 0;
+            height: 100%;
+            background: linear-gradient(#80d0c7, #25c491);
+            transition: 0.5s ease;
+        }
+
+        #h {
+            margin-bottom: 6vw;
+            font-family: arial;
+            font-size: 2vw;
+            font-weight: 100;
+            text-align: center;
+        }
+
+        #lh #ls {
+            display: block;
+            margin-bottom: 1vw;
+        }
+
+        #lp {
+            margin-top: 2vw;
+            font-family: arial;
+            font-size: 2vw;
+        }
+
+        .reference {
+            position: absolute;
+            right: 24px;
+            bottom: 24px;
+            font-family: arial;
+            text-decoration: none;
+        }
+    </style>
+
+    <link rel="stylesheet" href="/ariahant/static/css/details.css">
+</head>
+
+<body id="top">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+
+    <main>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <div class="b"><img src="/arihant/static/images/logo-final.png" alt="" width="200"></div>
+                </a>
+
+                <div class="d-lg-none ms-auto me-4">
+<!--                    <a href="#top" class="navbar-icon bi-person smoothscroll"></a>-->
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="/">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutus">About Us</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/expertise">Expertise</a>
+                        </li>
+
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Industries</a>
+
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                               <li><a class="dropdown-item" href="/industry/pharma/">Pharma</a></li>
+                               <li><a class="dropdown-item" href="/industry/coporate">Corporate</a></li>
+                               <li><a class="dropdown-item" href="detail">Factory</a></li>
+                               <li><a class="dropdown-item" href="detail">Jewellery</a></li>
+                               <li><a class="dropdown-item" href="detail">Automobile</a></li>
+                               <li><a class="dropdown-item" href="detail">Hospital</a></li>
+                            </ul>
+                        </li> -->
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/faqs">FAQs</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Inquiry</a>
+                        </li>
+
+<!--                        <li class="nav-item dropdown">-->
+<!--                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"-->
+<!--                                data-bs-toggle="dropdown" aria-expanded="false">Pages</a>-->
+
+<!--                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">-->
+<!--                                <li><a class="dropdown-item" href="topic">Topics Listing</a></li>-->
+
+<!--                                <li><a class="dropdown-item" href="/contact">Contact Form</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+                    </ul>
+
+                    <div class="d-none d-lg-block">
+                        <!-- <a href="#top" class="navbar-icon bi-person smoothscroll"></a> -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <header class="site-header d-flex flex-column justify-content-center align-items-center">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-5 col-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active"><a href="/" style="color:black;">Homepage</a></li>
+
+                                <li class="breadcrumb-item active" aria-current="page">industry</li>
+                            </ol>
+                        </nav>
+
+                        <h2 class="text-white">Information Tech</h2>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <div id="main-box">
+            <div class="card" class="box-items" style="width: 18rem;">
+                <img class="card-img-top" src="/arihant/media/products/test.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Product name</h5>
+                    <a href="/contact" class="btn btn-primary">Inquire Now !</a>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="section-padding">
+        <div class="container">
+            <div class="row" id="footerr">
+                <div class="col-lg-6 col-12 mb-4 pb-2">
+                    <a class="navbar-brand mb-2" href="index.html">
+                        <!-- <i class="bi-back"></i> -->
+                        <span><img src="/arihant/static/images/logo-final.png" alt=""
+                                style="max-width: 350px; width: 60%;"></span>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <h6 class="site-footer-title mb-3">Quick links</h6>
+
+                    <ul class="site-footer-links">
+                        <li class="site-footer-link-item">
+                            <a href="/" class="site-footer-link">Home</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="/aboutus" class="site-footer-link">About Us</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="/expertise" class="site-footer-link">Expertise</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="/faqs" class="site-footer-link">FAQs</a>
+                        </li>
+                        <li class="site-footer-link-item">
+                            <a href="/contact" class="site-footer-link">Inquiry</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0" style="width: auto;">
+                    <h6 class="site-footer-title mb-3">Contact us</h6>
+
+                    <p class="text-white d-flex mb-1 fott">
+                        <a href="tel: 305-240-9671" class="site-footer-link">
+                            (+91) 9046496464
+                        </a>
+                    </p>
+
+                    <p class="text-white d-flex">
+                        <a href="mailto:info@company.com" class="site-footer-link">
+                            arihantsabrandatrust@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <!-- <div class -->
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="/arihant/static/js/jquery.min.js"></script>
+    <script src="/arihant/static/js/bootstrap.bundle.min.js"></script>
+    <script src="/arihant/static/js/jquery.sticky.js"></script>
+    <script src="/arihant/static/js/click-scroll.js"></script>
+    <script src="/arihant/static/js/custom.js"></script>
+    <script type="text/javascript">document.getElementById("Pharma-tab").click();</script>
+
+</body>
+
+</html>
